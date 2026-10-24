@@ -1,0 +1,6 @@
+import React from 'react';
+import { ArrowUp, FastForward } from 'lucide-react';
+import Coin3D from './Coin3D';
+export default function CoinPlate({coins,isTossing,currentLineIndex,onToss,onQuickTossAll,disabled}) {
+  return <div className="coin-panel"><div className="stage-label"><span>Ba đồng xu · Sáu lần gieo</span><span>{disabled?'Chờ tâm niệm':isTossing?'Đồng xu đang rơi':`Lần gieo ${currentLineIndex+1} / 6`}</span></div><div className="coin-stage"><div className="plate-ring outer"/><div className="plate-ring inner"/><div className="stage-center" aria-hidden="true">易</div><div className="coin-group">{coins.map((v,i)=><Coin3D key={i} value={v} index={i} isTossing={isTossing}/>)}</div><div className="plate-caption">乾 · 坤</div></div><div className="cast-actions"><button className="toss-button" disabled={disabled||isTossing} onClick={onToss}><ArrowUp size={18}/>{isTossing?'Đang gieo…':`Gieo ${['sơ','nhị','tam','tứ','ngũ','thượng'][currentLineIndex]} hào`}</button><button className="text-button" disabled={disabled||isTossing} onClick={onQuickTossAll}><FastForward size={14}/>{currentLineIndex?'Gieo các hào còn lại':'Gieo nhanh 6 hào'}</button></div><p className="coin-explanation" aria-live="polite">{disabled?'Bắt đầu với một câu hỏi ở bên cạnh.':isTossing?'Đợi ba đồng xu an vị.':'Mặt chữ: 3 điểm · Mặt lưng: 2 điểm'}</p></div>;
+}

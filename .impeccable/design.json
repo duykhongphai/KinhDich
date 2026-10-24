@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T09:20:00+07:00",
+  "title": "Design System: Chu Dịch Linh Quái",
+  "extensions": {
+    "typographyMeta": {
+      "display": {"displayName":"Noto Serif", "purpose":"Quiet reading headings; self-hosted Latin and Vietnamese subsets."},
+      "body": {"displayName":"Be Vietnam Pro", "purpose":"Controls and prose; self-hosted 400 and 500 weights."}
+    },
+    "shadows": [{"name":"plate", "value":"0 18px 24px #080c0877", "purpose":"Depth beneath the coin plate only."}],
+    "motion": [
+      {"name":"coin-flight", "value":"1580ms linear", "purpose":"Rise, flip, land, bounce and settle."},
+      {"name":"coin-stagger", "value":"65ms", "purpose":"Per-coin delay."},
+      {"name":"line-commit", "value":"1800ms", "purpose":"Record the line after every coin settles."},
+      {"name":"reduced-motion", "value":"180ms reveal; 220ms commit", "purpose":"No spinning or staggering when reduced motion is preferred."}
+    ],
+    "breakpoints": [
+      {"name":"mobile", "value":"760px", "purpose":"Single-column workspace and full-width reading note."},
+      {"name":"compact", "value":"1000px", "purpose":"Reduced padding and narrow reading index."}
+    ],
+    "rules": ["No emoji or decorative glow.", "Moving lines use text markers as well as cinnabar color.", "Keep translation availability and classical source notes visible.", "Use native dialogs for focus containment and Escape dismissal."]
+  }
+}

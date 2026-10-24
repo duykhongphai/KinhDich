@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.agents/
+skills-lock.json
+.impeccable/review/
